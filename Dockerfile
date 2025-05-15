@@ -20,8 +20,6 @@ RUN apt update && apt install -y \
 
 COPY --from=builder /go/src/gocesiumtiler/bin/gocesiumtiler /usr/local/bin/gocesiumtiler
 
-# 作業ディレクトリの設定
 WORKDIR /data
 
-# デフォルトコマンド
 CMD ["gocesiumtiler", "--help"]
